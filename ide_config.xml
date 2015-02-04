@@ -1,0 +1,54 @@
+<application>
+<name>Callback Command Demo</name>
+<author>Sandeep Paliwal</author>
+<version>beta</version>
+<description>Demo Extension For Callback Commands.
+Follow Editor context menu "CallBack Command Demo"</description>
+<email>sandeepp@adobe.com</email>  
+ 
+<!-- Add Editor Menu Contributions -->
+<menucontributions>
+        <contribution target = "editor">
+        	<menu name="CallBack Command Demo">
+        		<menu name="File commands" >
+        		  <action name="Open File" handlerid="openfile" showresponse="true" />
+				  <action name="Search File" handlerid="searchfile" showresponse="true" />
+				  <action name="Insert Text (Overwrite Selection)" handlerid="overwrite"/>
+				  <action name="Insert Text (Wrap Selection)" handlerid="wrap" />
+				</menu>
+				<menu name="Get Data commands" >
+				  <action name="Get Servers" handlerid="getservers" showresponse="true" />
+                  <action name="Get DataSources" handlerid="getds" showresponse="true" />
+				  <action name="Get Tables" handlerid="gettables" showresponse="true" />
+				  <action name="Get Table" handlerid="gettable" showresponse="true" />
+				  <action name="Get Functions and Variables" handlerid="getfv" showresponse="true" />
+				  
+                </menu>
+        	</menu>
+        </contribution>
+</menucontributions>
+<menucontributions>
+        <contribution target = "outlineview">
+        	<menu name="Outline test">
+        		
+				  <action name="test" handlerid="wrap" />			
+				
+        	</menu>
+        </contribution>
+</menucontributions>
+<!-- Define Handlers -->
+<handlers>    
+    <handler id="openfile" type="CFM" filename="openfile.cfm"/>
+	<handler id="searchfile" type="CFM" filename="searchfile.cfm"/>
+	<handler id="overwrite" type="CFM" filename="overwrite.cfm"/>
+	<handler id="wrap" type="CFM" filename="wrap.cfm"/>
+	
+	<handler id="getds" type="CFM" filename="getdatasource.cfm"/>
+	<handler id="getservers" type="CFM" filename="getservers.cfm"/>
+	<handler id="gettables" type="CFM" filename="gettables.cfm"/>
+	<handler id="gettable" type="CFM" filename="gettable.cfm"/>
+	<handler id="getfv" type="CFM" filename="getfnsandvars.cfm"/>
+	<handler id="getfv" type="CFM" filename="getfnsandvars.cfm"/>    
+</handlers>
+
+</application>
